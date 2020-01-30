@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2336d7bb41.js" crossorigin="anonymous"></script>
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="overlay">
+      <div>
+        <div>
+          <p>Rules</p>
+          <i class="fas fa-times return"></i>
+        </div>
+        <img height="85%" src="images/image-rules.svg">
+      </div>
+    </div>
+    <div class="name">
+      <div>
+        <p>Rock</p>
+        <p>Paper</p>
+        <p>Scissor</p>
+      </div>
+      <div class="score">
+        <p>Score</p>
+        <p id="highscore"></p>
+      </div>
+    </div>
+    <div class="content1">
+      <img src="images/bg-triangle.svg">
+      <div class="rock" id="1" onclick="play(this.id)"><div></div></div>
+      <div class="paper" id="2" onclick="play(this.id)"><div></div></div>
+      <div class="scissors" id="3" onclick="play(this.id)"><div></div></div>
+    </div>
+
+    <div class="content2">
+      <div>
+        <div>
+          <p>YOU PICKED</p>
+          <div class="selection"><div class="selectionImg"></div></div>
+        </div>
+        <div>
+          <p>THE HOUSE PICKED</p>
+          <div class="enemy"><div class="enemyImg"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="win">
+      <p class="winText"></p>
+      <button onclick="playAgain()">PLAY AGAIN</button>
+    </div>
+
+    <div class="rules">
+        <p>Rules</p>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/SteveAd-PT">Steven Adler</a>.
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="animations.js"></script>
+</body>
+</html>

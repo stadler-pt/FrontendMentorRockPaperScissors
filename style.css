@@ -1,0 +1,589 @@
+* {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 700;
+}
+
+body {
+  background-image: radial-gradient(at top, #1f3756, #141539);
+  overflow-x: hidden;
+}
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  left: 0;
+  top: 0;
+  display: none;
+  z-index: 9;
+  text-align: center;
+}
+
+.overlay div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 500px;
+  height: 400px;
+  border-radius: 30px;
+  background-color: whitesmoke;
+  opacity: 1;
+  padding: 50px;
+}
+
+.overlay div div {
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  font-size: 30px;
+  font-weight: 1100;
+  margin: 0px;
+}
+
+.overlay div div p {
+  color: #141539;
+  margin: 0px;
+}
+
+.overlay div div i.return {
+  color: lightgray;
+  font-size: 30px;
+  background-color: whitesmoke;
+  border: none;
+}
+
+.overlay div img {
+  margin-top: 15%;
+  position: relative;
+}
+
+.attribution {
+  height: 2vh;
+}
+
+div {
+  height: 92vh;
+  position: relative;
+}
+
+div div.name {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  width: 60%;
+  margin: 5vh auto 2vh auto;
+  border: solid 3px #606e85;
+  border-radius: 30px;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div div.name div {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  height: 100%;
+  width: 20%;
+  color: white;
+  font-size: 5vh;
+  margin: auto 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div div.name div p {
+  margin: 0px;
+}
+
+div div.name div.score {
+  min-width: 100px;
+  width: 13%;
+  height: 80%;
+  background-color: white;
+  color: #2a46c0;
+  margin-right: 3%;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div div.name div.score p {
+  margin: 0px;
+}
+
+div div.name div.score p#highscore {
+  color: #606e85;
+  font-size: 2em;
+}
+
+div div.rules {
+  position: absolute;
+  bottom: 3%;
+  color: white;
+  height: 5vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  right: 7%;
+  font-weight: 400;
+  border: solid 1.5px #606e85;
+  border-radius: 7px;
+  padding: 0px 40px;
+  font-size: 0.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div div.rules:hover {
+  zoom: 1.3;
+  cursor: pointer;
+}
+
+div div.content1 {
+  height: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 42% 16% 42%;
+      grid-template-columns: 42% 16% 42%;
+  -ms-grid-rows: 5% 5% 50% 20% 20%;
+      grid-template-rows: 5% 5% 50% 20% 20%;
+}
+
+div div.content1 img {
+  width: 25vw;
+  min-width: 350px;
+  max-width: 450px;
+  top: 12%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  bottom: 30vh;
+}
+
+div div.content1 div.rock {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+  background: linear-gradient(to bottom, #dc2e4e, #dd405d);
+  padding: 20px;
+  -webkit-box-shadow: 0px 5px #991834;
+          box-shadow: 0px 5px #991834;
+}
+
+div div.content1 div.rock div {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-image: url(https://stadler-pt.github.io/FrontendMentorRockPaperScissors/images/icon-rock.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  background-color: white;
+  -webkit-box-shadow: 0px -5px lightgrey;
+          box-shadow: 0px -5px lightgrey;
+}
+
+div div.content1 div.paper {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+  background: linear-gradient(to bottom, #4865f4, #5671f5);
+  padding: 20px;
+  -webkit-box-shadow: 0px 5px #2a43c0;
+          box-shadow: 0px 5px #2a43c0;
+}
+
+div div.content1 div.paper div {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-image: url(https://stadler-pt.github.io/FrontendMentorRockPaperScissors/images/icon-paper.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  background-color: white;
+  -webkit-box-shadow: 0px -5px lightgrey;
+          box-shadow: 0px -5px lightgrey;
+}
+
+div div.content1 div.scissors {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+  background: linear-gradient(to bottom, #ec9e0e, #eca922);
+  padding: 20px;
+  -webkit-box-shadow: 0px 5px #c86d1c;
+          box-shadow: 0px 5px #c86d1c;
+}
+
+div div.content1 div.scissors div {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-image: url(https://stadler-pt.github.io/FrontendMentorRockPaperScissors/images/icon-scissors.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  background-color: white;
+  -webkit-box-shadow: 0px -5px lightgrey;
+          box-shadow: 0px -5px lightgrey;
+}
+
+div.content2 {
+  margin-top: 3%;
+  height: 75.5%;
+  width: 100vw;
+  display: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+div.content2 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 60%;
+  height: 100%;
+  margin: auto;
+}
+
+div.content2 div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: white;
+  text-align: center;
+  height: 100%;
+}
+
+div.content2 div div p {
+  font-size: 25px;
+}
+
+div.content2 div div.selection {
+  margin: 7% auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+  padding: 25px;
+}
+
+div.content2 div div.selection div.selectionImg {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  background-color: white;
+  -webkit-box-shadow: 0px -7px lightgrey;
+          box-shadow: 0px -7px lightgrey;
+}
+
+div.content2 div div.enemy {
+  margin: 7% auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+  padding: 25px;
+}
+
+div.content2 div div.enemy div.enemyImg {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.win {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
+  width: 30vw;
+  height: 20vh;
+  display: none;
+  z-index: 5;
+  text-align: center;
+}
+
+.win p {
+  color: white;
+  font-size: 2em;
+}
+
+.win button {
+  padding: 1em 3em;
+  background-color: white;
+  color: #141539;
+  border-radius: 10px;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+.rock:hover, .paper:hover, .scissors:hover {
+  zoom: 1.2;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  div div.name {
+    height: 15%;
+    width: 90%;
+    border-radius: 7px;
+  }
+  div div.name div {
+    font-size: 2.5vh;
+  }
+  div div.name div.score {
+    min-width: 80px;
+    width: 10%;
+    height: 80%;
+    background-color: white;
+    color: #2a46c0;
+    margin-right: 3%;
+    border-radius: 7px;
+    font-size: 1em;
+  }
+  div div.content1 {
+    height: 60%;
+    -ms-grid-columns: 42% 16% 42%;
+        grid-template-columns: 42% 16% 42%;
+    -ms-grid-rows: 15% 25% 20% 25% 15%;
+        grid-template-rows: 15% 25% 20% 25% 15%;
+  }
+  div div.content1 img {
+    width: 25vw;
+    min-width: 200px;
+    max-width: 450px;
+    top: 25%;
+  }
+  div div.content1 div.rock {
+    width: 80px;
+    height: 80px;
+    padding: 12px;
+    -webkit-box-shadow: 0px 3px #991834;
+            box-shadow: 0px 3px #991834;
+  }
+  div div.content1 div.rock div {
+    width: 80px;
+    height: 80px;
+    background-size: 50%;
+    -webkit-box-shadow: 0px -3px lightgrey;
+            box-shadow: 0px -3px lightgrey;
+  }
+  div div.content1 div.paper {
+    width: 80px;
+    height: 80px;
+    padding: 12px;
+    -webkit-box-shadow: 0px 3px #2a43c0;
+            box-shadow: 0px 3px #2a43c0;
+  }
+  div div.content1 div.paper div {
+    width: 80px;
+    height: 80px;
+    background-size: 50%;
+    -webkit-box-shadow: 0px -3px lightgrey;
+            box-shadow: 0px -3px lightgrey;
+  }
+  div div.content1 div.scissors {
+    width: 80px;
+    height: 80px;
+    padding: 12px;
+    -webkit-box-shadow: 0px 3px #c86d1c;
+            box-shadow: 0px 3px #c86d1c;
+  }
+  div div.content1 div.scissors div {
+    width: 80px;
+    height: 80px;
+    background-size: 50%;
+    -webkit-box-shadow: 0px -3px lightgrey;
+            box-shadow: 0px -3px lightgrey;
+  }
+  div div.rules {
+    bottom: 7%;
+    right: 50%;
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
+  div div.rules:hover {
+    zoom: 1.15;
+  }
+  .overlay div {
+    top: 0%;
+    left: 0%;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    padding: 0px;
+  }
+  .overlay div div {
+    padding: 0px;
+    margin: 0px;
+  }
+  .overlay div div p {
+    margin: 15% auto;
+  }
+  .overlay div div i.return {
+    position: absolute;
+    right: 50%;
+    top: 85%;
+    -webkit-transform: translate(50%, 0%);
+            transform: translate(50%, 0%);
+  }
+  .overlay div img {
+    height: 45% !important;
+    margin-top: 40%;
+    position: relative;
+  }
+  div.content2 div {
+    width: 90%;
+    height: 50%;
+  }
+  div.content2 div div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  div.content2 div div p {
+    font-size: 0.8em;
+  }
+  div.content2 div div.selection {
+    width: 5em;
+    height: 5em;
+    padding: 12px;
+  }
+  div.content2 div div.selection div.selectionImg {
+    width: 5em;
+    height: 5em;
+    background-size: 60%;
+    -webkit-box-shadow: 0px -3px lightgrey;
+            box-shadow: 0px -3px lightgrey;
+  }
+  div.content2 div div.enemy {
+    width: 5em;
+    height: 5em;
+    padding: 12px;
+  }
+  div.content2 div div.enemy div.enemyImg {
+    width: 5em;
+    height: 5em;
+  }
+  .win {
+    top: 60%;
+    left: 50%;
+    width: 65vw;
+    height: 5vh;
+  }
+  .win p {
+    font-size: 3em;
+    margin: 1vw;
+  }
+  .win button {
+    padding: 1em 3em;
+    border-radius: 10px;
+    font-size: 1em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
